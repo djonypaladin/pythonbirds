@@ -1,6 +1,8 @@
 class Pessoa:
-      def __init__(self):
-         self.name= None
+      def __init__(self,*familia,name=None,idade=17):
+         self.name= name
+         self.familia= list(familia)
+         self.idade= idade
 
       def comprimentar(self):
           return 'hello my code'
@@ -10,9 +12,12 @@ class Pessoa:
           return list(range(10,0,-1))
 
 if __name__ == '__main__':
-    p = Pessoa()
-    type (p)
-    print(p.comprimentar())
-    print(p.contar_1())
-    p.name = 'paladin djony'
-    print(p.name, p.despedisir())
+    djony = Pessoa(name='djony', idade=17)
+    mother = Pessoa(djony,name='mother',idade=46)
+    type (djony)
+    print(djony.comprimentar())
+    print(djony.contar_1())
+    print(djony.name)
+    print(mother.name)
+    for familia in mother.familia:
+     print(familia.name,familia.idade)
