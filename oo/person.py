@@ -21,3 +21,4 @@ if __name__ == '__main__':
     print(mother.name)
     for familia in mother.familia:
      print(familia.name,familia.idade)
+     print(djony.__dict__)
